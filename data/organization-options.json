@@ -1,0 +1,2118 @@
+[
+  {
+    "id": "pd-1",
+    "name": "ACEH",
+    "pcs": [
+      {
+        "id": "pc-1-1",
+        "name": "ACEH BARAT"
+      },
+      {
+        "id": "pc-1-2",
+        "name": "ACEH BARAT DAYA"
+      },
+      {
+        "id": "pc-1-3",
+        "name": "ACEH BESAR"
+      },
+      {
+        "id": "pc-1-4",
+        "name": "ACEH JAYA"
+      },
+      {
+        "id": "pc-1-5",
+        "name": "ACEH SELATAN"
+      },
+      {
+        "id": "pc-1-6",
+        "name": "ACEH SINGKIL"
+      },
+      {
+        "id": "pc-1-7",
+        "name": "ACEH TAMIANG"
+      },
+      {
+        "id": "pc-1-8",
+        "name": "ACEH TENGAH"
+      },
+      {
+        "id": "pc-1-9",
+        "name": "ACEH TENGGARA"
+      },
+      {
+        "id": "pc-1-10",
+        "name": "ACEH TIMUR"
+      },
+      {
+        "id": "pc-1-11",
+        "name": "ACEH UTARA"
+      },
+      {
+        "id": "pc-1-12",
+        "name": "BENER MERIAH"
+      },
+      {
+        "id": "pc-1-13",
+        "name": "BIREUEN"
+      },
+      {
+        "id": "pc-1-14",
+        "name": "GAYO LUES"
+      },
+      {
+        "id": "pc-1-15",
+        "name": "KOTA BANDA ACEH"
+      },
+      {
+        "id": "pc-1-16",
+        "name": "KOTA LANGSA"
+      },
+      {
+        "id": "pc-1-17",
+        "name": "KOTA LHOKSEUMAWE"
+      },
+      {
+        "id": "pc-1-18",
+        "name": "KOTA SABANG"
+      },
+      {
+        "id": "pc-1-19",
+        "name": "KOTA SUBULUSSALAM"
+      },
+      {
+        "id": "pc-1-20",
+        "name": "NAGAN RAYA"
+      },
+      {
+        "id": "pc-1-21",
+        "name": "PIDIE"
+      },
+      {
+        "id": "pc-1-22",
+        "name": "PIDIE JAYA"
+      },
+      {
+        "id": "pc-1-23",
+        "name": "SIMEULUE"
+      }
+    ]
+  },
+  {
+    "id": "pd-2",
+    "name": "BALI",
+    "pcs": [
+      {
+        "id": "pc-2-1",
+        "name": "BADUNG"
+      },
+      {
+        "id": "pc-2-2",
+        "name": "BANGLI"
+      },
+      {
+        "id": "pc-2-3",
+        "name": "BULELENG"
+      },
+      {
+        "id": "pc-2-4",
+        "name": "GIANYAR"
+      },
+      {
+        "id": "pc-2-5",
+        "name": "JEMBRANA"
+      },
+      {
+        "id": "pc-2-6",
+        "name": "KARANG ASEM"
+      },
+      {
+        "id": "pc-2-7",
+        "name": "KLUNGKUNG"
+      },
+      {
+        "id": "pc-2-8",
+        "name": "KOTA DENPASAR"
+      },
+      {
+        "id": "pc-2-9",
+        "name": "TABANAN"
+      }
+    ]
+  },
+  {
+    "id": "pd-3",
+    "name": "BANTEN",
+    "pcs": [
+      {
+        "id": "pc-3-1",
+        "name": "KOTA CILEGON"
+      },
+      {
+        "id": "pc-3-2",
+        "name": "KOTA SERANG"
+      },
+      {
+        "id": "pc-3-3",
+        "name": "KOTA TANGERANG"
+      },
+      {
+        "id": "pc-3-4",
+        "name": "KOTA TANGERANG SELATAN"
+      },
+      {
+        "id": "pc-3-5",
+        "name": "LEBAK"
+      },
+      {
+        "id": "pc-3-6",
+        "name": "PANDEGLANG"
+      },
+      {
+        "id": "pc-3-7",
+        "name": "SERANG"
+      },
+      {
+        "id": "pc-3-8",
+        "name": "TANGERANG"
+      }
+    ]
+  },
+  {
+    "id": "pd-4",
+    "name": "BENGKULU",
+    "pcs": [
+      {
+        "id": "pc-4-1",
+        "name": "BENGKULU SELATAN"
+      },
+      {
+        "id": "pc-4-2",
+        "name": "BENGKULU TENGAH"
+      },
+      {
+        "id": "pc-4-3",
+        "name": "BENGKULU UTARA"
+      },
+      {
+        "id": "pc-4-4",
+        "name": "KAUR"
+      },
+      {
+        "id": "pc-4-5",
+        "name": "KEPAHIANG"
+      },
+      {
+        "id": "pc-4-6",
+        "name": "KOTA BENGKULU"
+      },
+      {
+        "id": "pc-4-7",
+        "name": "LEBONG"
+      },
+      {
+        "id": "pc-4-8",
+        "name": "MUKOMUKO"
+      },
+      {
+        "id": "pc-4-9",
+        "name": "REJANG LEBONG"
+      },
+      {
+        "id": "pc-4-10",
+        "name": "SELUMA"
+      }
+    ]
+  },
+  {
+    "id": "pd-5",
+    "name": "DI YOGYAKARTA",
+    "pcs": [
+      {
+        "id": "pc-5-1",
+        "name": "BANTUL"
+      },
+      {
+        "id": "pc-5-2",
+        "name": "GUNUNG KIDUL"
+      },
+      {
+        "id": "pc-5-3",
+        "name": "KOTA YOGYAKARTA"
+      },
+      {
+        "id": "pc-5-4",
+        "name": "KULON PROGO"
+      },
+      {
+        "id": "pc-5-5",
+        "name": "SLEMAN"
+      }
+    ]
+  },
+  {
+    "id": "pd-6",
+    "name": "DKI JAKARTA",
+    "pcs": [
+      {
+        "id": "pc-6-1",
+        "name": "KEPULAUAN SERIBU"
+      },
+      {
+        "id": "pc-6-2",
+        "name": "KOTA JAKARTA BARAT"
+      },
+      {
+        "id": "pc-6-3",
+        "name": "KOTA JAKARTA PUSAT"
+      },
+      {
+        "id": "pc-6-4",
+        "name": "KOTA JAKARTA SELATAN"
+      },
+      {
+        "id": "pc-6-5",
+        "name": "KOTA JAKARTA TIMUR"
+      },
+      {
+        "id": "pc-6-6",
+        "name": "KOTA JAKARTA UTARA"
+      }
+    ]
+  },
+  {
+    "id": "pd-7",
+    "name": "GORONTALO",
+    "pcs": [
+      {
+        "id": "pc-7-1",
+        "name": "BONE BOLANGO"
+      },
+      {
+        "id": "pc-7-2",
+        "name": "GORONTALO"
+      },
+      {
+        "id": "pc-7-3",
+        "name": "GORONTALO UTARA"
+      },
+      {
+        "id": "pc-7-4",
+        "name": "KOTA GORONTALO"
+      },
+      {
+        "id": "pc-7-5",
+        "name": "POHUWATO"
+      }
+    ]
+  },
+  {
+    "id": "pd-8",
+    "name": "JAMBI",
+    "pcs": [
+      {
+        "id": "pc-8-1",
+        "name": "BATANG HARI"
+      },
+      {
+        "id": "pc-8-2",
+        "name": "BUNGO"
+      },
+      {
+        "id": "pc-8-3",
+        "name": "KERINCI"
+      },
+      {
+        "id": "pc-8-4",
+        "name": "KOTA JAMBI"
+      },
+      {
+        "id": "pc-8-5",
+        "name": "KOTA SUNGAI PENUH"
+      },
+      {
+        "id": "pc-8-6",
+        "name": "MERANGIN"
+      },
+      {
+        "id": "pc-8-7",
+        "name": "MUARO JAMBI"
+      },
+      {
+        "id": "pc-8-8",
+        "name": "SAROLANGUN"
+      },
+      {
+        "id": "pc-8-9",
+        "name": "TANJUNG JABUNG BARAT"
+      },
+      {
+        "id": "pc-8-10",
+        "name": "TANJUNG JABUNG TIMUR"
+      },
+      {
+        "id": "pc-8-11",
+        "name": "TEBO"
+      }
+    ]
+  },
+  {
+    "id": "pd-9",
+    "name": "JAWA BARAT",
+    "pcs": [
+      {
+        "id": "pc-9-1",
+        "name": "BANDUNG"
+      },
+      {
+        "id": "pc-9-2",
+        "name": "BANDUNG BARAT"
+      },
+      {
+        "id": "pc-9-3",
+        "name": "BEKASI"
+      },
+      {
+        "id": "pc-9-4",
+        "name": "BOGOR"
+      },
+      {
+        "id": "pc-9-5",
+        "name": "CIAMIS"
+      },
+      {
+        "id": "pc-9-6",
+        "name": "CIANJUR"
+      },
+      {
+        "id": "pc-9-7",
+        "name": "CIREBON"
+      },
+      {
+        "id": "pc-9-8",
+        "name": "GARUT"
+      },
+      {
+        "id": "pc-9-9",
+        "name": "INDRAMAYU"
+      },
+      {
+        "id": "pc-9-10",
+        "name": "KARAWANG"
+      },
+      {
+        "id": "pc-9-11",
+        "name": "KOTA BANDUNG"
+      },
+      {
+        "id": "pc-9-12",
+        "name": "KOTA BANJAR"
+      },
+      {
+        "id": "pc-9-13",
+        "name": "KOTA BEKASI"
+      },
+      {
+        "id": "pc-9-14",
+        "name": "KOTA BOGOR"
+      },
+      {
+        "id": "pc-9-15",
+        "name": "KOTA CIMAHI"
+      },
+      {
+        "id": "pc-9-16",
+        "name": "KOTA CIREBON"
+      },
+      {
+        "id": "pc-9-17",
+        "name": "KOTA DEPOK"
+      },
+      {
+        "id": "pc-9-18",
+        "name": "KOTA SUKABUMI"
+      },
+      {
+        "id": "pc-9-19",
+        "name": "KOTA TASIKMALAYA"
+      },
+      {
+        "id": "pc-9-20",
+        "name": "KUNINGAN"
+      },
+      {
+        "id": "pc-9-21",
+        "name": "MAJALENGKA"
+      },
+      {
+        "id": "pc-9-22",
+        "name": "PANGANDARAN"
+      },
+      {
+        "id": "pc-9-23",
+        "name": "PURWAKARTA"
+      },
+      {
+        "id": "pc-9-24",
+        "name": "SUBANG"
+      },
+      {
+        "id": "pc-9-25",
+        "name": "SUKABUMI"
+      },
+      {
+        "id": "pc-9-26",
+        "name": "SUMEDANG"
+      },
+      {
+        "id": "pc-9-27",
+        "name": "TASIKMALAYA"
+      }
+    ]
+  },
+  {
+    "id": "pd-10",
+    "name": "JAWA TENGAH",
+    "pcs": [
+      {
+        "id": "pc-10-1",
+        "name": "BANJARNEGARA"
+      },
+      {
+        "id": "pc-10-2",
+        "name": "BANYUMAS"
+      },
+      {
+        "id": "pc-10-3",
+        "name": "BATANG"
+      },
+      {
+        "id": "pc-10-4",
+        "name": "BLORA"
+      },
+      {
+        "id": "pc-10-5",
+        "name": "BOYOLALI"
+      },
+      {
+        "id": "pc-10-6",
+        "name": "BREBES"
+      },
+      {
+        "id": "pc-10-7",
+        "name": "CILACAP"
+      },
+      {
+        "id": "pc-10-8",
+        "name": "DEMAK"
+      },
+      {
+        "id": "pc-10-9",
+        "name": "GROBOGAN"
+      },
+      {
+        "id": "pc-10-10",
+        "name": "JEPARA"
+      },
+      {
+        "id": "pc-10-11",
+        "name": "KARANGANYAR"
+      },
+      {
+        "id": "pc-10-12",
+        "name": "KEBUMEN"
+      },
+      {
+        "id": "pc-10-13",
+        "name": "KENDAL"
+      },
+      {
+        "id": "pc-10-14",
+        "name": "KLATEN"
+      },
+      {
+        "id": "pc-10-15",
+        "name": "KOTA MAGELANG"
+      },
+      {
+        "id": "pc-10-16",
+        "name": "KOTA PEKALONGAN"
+      },
+      {
+        "id": "pc-10-17",
+        "name": "KOTA SALATIGA"
+      },
+      {
+        "id": "pc-10-18",
+        "name": "KOTA SEMARANG"
+      },
+      {
+        "id": "pc-10-19",
+        "name": "KOTA SURAKARTA"
+      },
+      {
+        "id": "pc-10-20",
+        "name": "KOTA TEGAL"
+      },
+      {
+        "id": "pc-10-21",
+        "name": "KUDUS"
+      },
+      {
+        "id": "pc-10-22",
+        "name": "MAGELANG"
+      },
+      {
+        "id": "pc-10-23",
+        "name": "PATI"
+      },
+      {
+        "id": "pc-10-24",
+        "name": "PEKALONGAN"
+      },
+      {
+        "id": "pc-10-25",
+        "name": "PEMALANG"
+      },
+      {
+        "id": "pc-10-26",
+        "name": "PURBALINGGA"
+      },
+      {
+        "id": "pc-10-27",
+        "name": "PURWOREJO"
+      },
+      {
+        "id": "pc-10-28",
+        "name": "REMBANG"
+      },
+      {
+        "id": "pc-10-29",
+        "name": "SEMARANG"
+      },
+      {
+        "id": "pc-10-30",
+        "name": "SRAGEN"
+      },
+      {
+        "id": "pc-10-31",
+        "name": "SUKOHARJO"
+      },
+      {
+        "id": "pc-10-32",
+        "name": "TEGAL"
+      },
+      {
+        "id": "pc-10-33",
+        "name": "TEMANGGUNG"
+      },
+      {
+        "id": "pc-10-34",
+        "name": "WONOGIRI"
+      },
+      {
+        "id": "pc-10-35",
+        "name": "WONOSOBO"
+      }
+    ]
+  },
+  {
+    "id": "pd-11",
+    "name": "JAWA TIMUR",
+    "pcs": [
+      {
+        "id": "pc-11-1",
+        "name": "BANGKALAN"
+      },
+      {
+        "id": "pc-11-2",
+        "name": "BANYUWANGI"
+      },
+      {
+        "id": "pc-11-3",
+        "name": "BLITAR"
+      },
+      {
+        "id": "pc-11-4",
+        "name": "BOJONEGORO"
+      },
+      {
+        "id": "pc-11-5",
+        "name": "BONDOWOSO"
+      },
+      {
+        "id": "pc-11-6",
+        "name": "GRESIK"
+      },
+      {
+        "id": "pc-11-7",
+        "name": "JEMBER"
+      },
+      {
+        "id": "pc-11-8",
+        "name": "JOMBANG"
+      },
+      {
+        "id": "pc-11-9",
+        "name": "KEDIRI"
+      },
+      {
+        "id": "pc-11-10",
+        "name": "KOTA BATU"
+      },
+      {
+        "id": "pc-11-11",
+        "name": "KOTA BLITAR"
+      },
+      {
+        "id": "pc-11-12",
+        "name": "KOTA KEDIRI"
+      },
+      {
+        "id": "pc-11-13",
+        "name": "KOTA MADIUN"
+      },
+      {
+        "id": "pc-11-14",
+        "name": "KOTA MALANG"
+      },
+      {
+        "id": "pc-11-15",
+        "name": "KOTA MOJOKERTO"
+      },
+      {
+        "id": "pc-11-16",
+        "name": "KOTA PASURUAN"
+      },
+      {
+        "id": "pc-11-17",
+        "name": "KOTA PROBOLINGGO"
+      },
+      {
+        "id": "pc-11-18",
+        "name": "KOTA SURABAYA"
+      },
+      {
+        "id": "pc-11-19",
+        "name": "LAMONGAN"
+      },
+      {
+        "id": "pc-11-20",
+        "name": "LUMAJANG"
+      },
+      {
+        "id": "pc-11-21",
+        "name": "MADIUN"
+      },
+      {
+        "id": "pc-11-22",
+        "name": "MAGETAN"
+      },
+      {
+        "id": "pc-11-23",
+        "name": "MALANG"
+      },
+      {
+        "id": "pc-11-24",
+        "name": "MOJOKERTO"
+      },
+      {
+        "id": "pc-11-25",
+        "name": "NGANJUK"
+      },
+      {
+        "id": "pc-11-26",
+        "name": "NGAWI"
+      },
+      {
+        "id": "pc-11-27",
+        "name": "PACITAN"
+      },
+      {
+        "id": "pc-11-28",
+        "name": "PAMEKASAN"
+      },
+      {
+        "id": "pc-11-29",
+        "name": "PASURUAN"
+      },
+      {
+        "id": "pc-11-30",
+        "name": "PONOROGO"
+      },
+      {
+        "id": "pc-11-31",
+        "name": "PROBOLINGGO"
+      },
+      {
+        "id": "pc-11-32",
+        "name": "SAMPANG"
+      },
+      {
+        "id": "pc-11-33",
+        "name": "SIDOARJO"
+      },
+      {
+        "id": "pc-11-34",
+        "name": "SITUBONDO"
+      },
+      {
+        "id": "pc-11-35",
+        "name": "SUMENEP"
+      },
+      {
+        "id": "pc-11-36",
+        "name": "TRENGGALEK"
+      },
+      {
+        "id": "pc-11-37",
+        "name": "TUBAN"
+      },
+      {
+        "id": "pc-11-38",
+        "name": "TULUNGAGUNG"
+      }
+    ]
+  },
+  {
+    "id": "pd-12",
+    "name": "KALIMANTAN BARAT",
+    "pcs": [
+      {
+        "id": "pc-12-1",
+        "name": "BENGKAYANG"
+      },
+      {
+        "id": "pc-12-2",
+        "name": "KAPUAS HULU"
+      },
+      {
+        "id": "pc-12-3",
+        "name": "KAYONG UTARA"
+      },
+      {
+        "id": "pc-12-4",
+        "name": "KETAPANG"
+      },
+      {
+        "id": "pc-12-5",
+        "name": "KOTA PONTIANAK"
+      },
+      {
+        "id": "pc-12-6",
+        "name": "KOTA SINGKAWANG"
+      },
+      {
+        "id": "pc-12-7",
+        "name": "KUBU RAYA"
+      },
+      {
+        "id": "pc-12-8",
+        "name": "LANDAK"
+      },
+      {
+        "id": "pc-12-9",
+        "name": "MELAWI"
+      },
+      {
+        "id": "pc-12-10",
+        "name": "MEMPAWAH"
+      },
+      {
+        "id": "pc-12-11",
+        "name": "SAMBAS"
+      },
+      {
+        "id": "pc-12-12",
+        "name": "SANGGAU"
+      },
+      {
+        "id": "pc-12-13",
+        "name": "SEKADAU"
+      },
+      {
+        "id": "pc-12-14",
+        "name": "SINTANG"
+      }
+    ]
+  },
+  {
+    "id": "pd-13",
+    "name": "KALIMANTAN SELATAN",
+    "pcs": [
+      {
+        "id": "pc-13-1",
+        "name": "BALANGAN"
+      },
+      {
+        "id": "pc-13-2",
+        "name": "BANJAR"
+      },
+      {
+        "id": "pc-13-3",
+        "name": "BARITO KUALA"
+      },
+      {
+        "id": "pc-13-4",
+        "name": "HULU SUNGAI SELATAN"
+      },
+      {
+        "id": "pc-13-5",
+        "name": "HULU SUNGAI TENGAH"
+      },
+      {
+        "id": "pc-13-6",
+        "name": "HULU SUNGAI UTARA"
+      },
+      {
+        "id": "pc-13-7",
+        "name": "KOTA BANJAR BARU"
+      },
+      {
+        "id": "pc-13-8",
+        "name": "KOTA BANJARMASIN"
+      },
+      {
+        "id": "pc-13-9",
+        "name": "KOTA BARU"
+      },
+      {
+        "id": "pc-13-10",
+        "name": "TABALONG"
+      },
+      {
+        "id": "pc-13-11",
+        "name": "TANAH BUMBU"
+      },
+      {
+        "id": "pc-13-12",
+        "name": "TANAH LAUT"
+      },
+      {
+        "id": "pc-13-13",
+        "name": "TAPIN"
+      }
+    ]
+  },
+  {
+    "id": "pd-14",
+    "name": "KALIMANTAN TENGAH",
+    "pcs": [
+      {
+        "id": "pc-14-1",
+        "name": "BARITO SELATAN"
+      },
+      {
+        "id": "pc-14-2",
+        "name": "BARITO TIMUR"
+      },
+      {
+        "id": "pc-14-3",
+        "name": "BARITO UTARA"
+      },
+      {
+        "id": "pc-14-4",
+        "name": "GUNUNG MAS"
+      },
+      {
+        "id": "pc-14-5",
+        "name": "KAPUAS"
+      },
+      {
+        "id": "pc-14-6",
+        "name": "KATINGAN"
+      },
+      {
+        "id": "pc-14-7",
+        "name": "KOTA PALANGKA RAYA"
+      },
+      {
+        "id": "pc-14-8",
+        "name": "KOTAWARINGIN BARAT"
+      },
+      {
+        "id": "pc-14-9",
+        "name": "KOTAWARINGIN TIMUR"
+      },
+      {
+        "id": "pc-14-10",
+        "name": "LAMANDAU"
+      },
+      {
+        "id": "pc-14-11",
+        "name": "MURUNG RAYA"
+      },
+      {
+        "id": "pc-14-12",
+        "name": "PULANG PISAU"
+      },
+      {
+        "id": "pc-14-13",
+        "name": "SERUYAN"
+      },
+      {
+        "id": "pc-14-14",
+        "name": "SUKAMARA"
+      }
+    ]
+  },
+  {
+    "id": "pd-15",
+    "name": "KALIMANTAN TIMUR",
+    "pcs": [
+      {
+        "id": "pc-15-1",
+        "name": "BERAU"
+      },
+      {
+        "id": "pc-15-2",
+        "name": "KOTA BALIKPAPAN"
+      },
+      {
+        "id": "pc-15-3",
+        "name": "KOTA BONTANG"
+      },
+      {
+        "id": "pc-15-4",
+        "name": "KOTA SAMARINDA"
+      },
+      {
+        "id": "pc-15-5",
+        "name": "KUTAI BARAT"
+      },
+      {
+        "id": "pc-15-6",
+        "name": "KUTAI KARTANEGARA"
+      },
+      {
+        "id": "pc-15-7",
+        "name": "KUTAI TIMUR"
+      },
+      {
+        "id": "pc-15-8",
+        "name": "MAHAKAM HULU"
+      },
+      {
+        "id": "pc-15-9",
+        "name": "PASER"
+      },
+      {
+        "id": "pc-15-10",
+        "name": "PENAJAM PASER UTARA"
+      }
+    ]
+  },
+  {
+    "id": "pd-16",
+    "name": "KALIMANTAN UTARA",
+    "pcs": [
+      {
+        "id": "pc-16-1",
+        "name": "BULUNGAN"
+      },
+      {
+        "id": "pc-16-2",
+        "name": "KOTA TARAKAN"
+      },
+      {
+        "id": "pc-16-3",
+        "name": "MALINAU"
+      },
+      {
+        "id": "pc-16-4",
+        "name": "NUNUKAN"
+      },
+      {
+        "id": "pc-16-5",
+        "name": "TANA TIDUNG"
+      }
+    ]
+  },
+  {
+    "id": "pd-17",
+    "name": "KEPULAUAN BANGKA BELITUNG",
+    "pcs": [
+      {
+        "id": "pc-17-1",
+        "name": "BANGKA"
+      },
+      {
+        "id": "pc-17-2",
+        "name": "BANGKA BARAT"
+      },
+      {
+        "id": "pc-17-3",
+        "name": "BANGKA SELATAN"
+      },
+      {
+        "id": "pc-17-4",
+        "name": "BANGKA TENGAH"
+      },
+      {
+        "id": "pc-17-5",
+        "name": "BELITUNG"
+      },
+      {
+        "id": "pc-17-6",
+        "name": "BELITUNG TIMUR"
+      },
+      {
+        "id": "pc-17-7",
+        "name": "KOTA PANGKAL PINANG"
+      }
+    ]
+  },
+  {
+    "id": "pd-18",
+    "name": "KEPULAUAN RIAU",
+    "pcs": [
+      {
+        "id": "pc-18-1",
+        "name": "BINTAN"
+      },
+      {
+        "id": "pc-18-2",
+        "name": "KARIMUN"
+      },
+      {
+        "id": "pc-18-3",
+        "name": "KEPULAUAN ANAMBAS"
+      },
+      {
+        "id": "pc-18-4",
+        "name": "KOTA BATAM"
+      },
+      {
+        "id": "pc-18-5",
+        "name": "KOTA TANJUNG PINANG"
+      },
+      {
+        "id": "pc-18-6",
+        "name": "LINGGA"
+      },
+      {
+        "id": "pc-18-7",
+        "name": "NATUNA"
+      }
+    ]
+  },
+  {
+    "id": "pd-19",
+    "name": "LAMPUNG",
+    "pcs": [
+      {
+        "id": "pc-19-1",
+        "name": "KOTA BANDAR LAMPUNG"
+      },
+      {
+        "id": "pc-19-2",
+        "name": "KOTA METRO"
+      },
+      {
+        "id": "pc-19-3",
+        "name": "LAMPUNG BARAT"
+      },
+      {
+        "id": "pc-19-4",
+        "name": "LAMPUNG SELATAN"
+      },
+      {
+        "id": "pc-19-5",
+        "name": "LAMPUNG TENGAH"
+      },
+      {
+        "id": "pc-19-6",
+        "name": "LAMPUNG TIMUR"
+      },
+      {
+        "id": "pc-19-7",
+        "name": "LAMPUNG UTARA"
+      },
+      {
+        "id": "pc-19-8",
+        "name": "MESUJI"
+      },
+      {
+        "id": "pc-19-9",
+        "name": "PESAWARAN"
+      },
+      {
+        "id": "pc-19-10",
+        "name": "PESISIR BARAT"
+      },
+      {
+        "id": "pc-19-11",
+        "name": "PRINGSEWU"
+      },
+      {
+        "id": "pc-19-12",
+        "name": "TANGGAMUS"
+      },
+      {
+        "id": "pc-19-13",
+        "name": "TULANG BAWANG BARAT"
+      },
+      {
+        "id": "pc-19-14",
+        "name": "TULANGBAWANG"
+      },
+      {
+        "id": "pc-19-15",
+        "name": "WAY KANAN"
+      }
+    ]
+  },
+  {
+    "id": "pd-20",
+    "name": "MALUKU",
+    "pcs": [
+      {
+        "id": "pc-20-1",
+        "name": "BURU"
+      },
+      {
+        "id": "pc-20-2",
+        "name": "BURU SELATAN"
+      },
+      {
+        "id": "pc-20-3",
+        "name": "KOTA AMBON"
+      },
+      {
+        "id": "pc-20-4",
+        "name": "KOTA TUAL"
+      },
+      {
+        "id": "pc-20-5",
+        "name": "MALUKU TENGAH"
+      },
+      {
+        "id": "pc-20-6",
+        "name": "MALUKU TENGGARA BARAT"
+      },
+      {
+        "id": "pc-20-7",
+        "name": "SERAM BAGIAN TIMUR"
+      }
+    ]
+  },
+  {
+    "id": "pd-21",
+    "name": "MALUKU UTARA",
+    "pcs": [
+      {
+        "id": "pc-21-1",
+        "name": "HALMAHERA SELATAN"
+      },
+      {
+        "id": "pc-21-2",
+        "name": "HALMAHERA TIMUR"
+      },
+      {
+        "id": "pc-21-3",
+        "name": "KOTA TERNATE"
+      },
+      {
+        "id": "pc-21-4",
+        "name": "KOTA TIDORE KEPULAUAN"
+      },
+      {
+        "id": "pc-21-5",
+        "name": "PULAU MOROTAI"
+      }
+    ]
+  },
+  {
+    "id": "pd-22",
+    "name": "NUSA TENGGARA BARAT",
+    "pcs": [
+      {
+        "id": "pc-22-1",
+        "name": "BIMA"
+      },
+      {
+        "id": "pc-22-2",
+        "name": "DOMPU"
+      },
+      {
+        "id": "pc-22-3",
+        "name": "KOTA BIMA"
+      },
+      {
+        "id": "pc-22-4",
+        "name": "KOTA MATARAM"
+      },
+      {
+        "id": "pc-22-5",
+        "name": "LOMBOK BARAT"
+      },
+      {
+        "id": "pc-22-6",
+        "name": "LOMBOK TENGAH"
+      },
+      {
+        "id": "pc-22-7",
+        "name": "LOMBOK TIMUR"
+      },
+      {
+        "id": "pc-22-8",
+        "name": "LOMBOK UTARA"
+      },
+      {
+        "id": "pc-22-9",
+        "name": "SUMBAWA"
+      },
+      {
+        "id": "pc-22-10",
+        "name": "SUMBAWA BARAT"
+      }
+    ]
+  },
+  {
+    "id": "pd-23",
+    "name": "NUSA TENGGARA TIMUR",
+    "pcs": [
+      {
+        "id": "pc-23-1",
+        "name": "ALOR"
+      },
+      {
+        "id": "pc-23-2",
+        "name": "BELU"
+      },
+      {
+        "id": "pc-23-3",
+        "name": "ENDE"
+      },
+      {
+        "id": "pc-23-4",
+        "name": "FLORES TIMUR"
+      },
+      {
+        "id": "pc-23-5",
+        "name": "KOTA KUPANG"
+      },
+      {
+        "id": "pc-23-6",
+        "name": "KUPANG"
+      },
+      {
+        "id": "pc-23-7",
+        "name": "MANGGARAI"
+      },
+      {
+        "id": "pc-23-8",
+        "name": "MANGGARAI BARAT"
+      },
+      {
+        "id": "pc-23-9",
+        "name": "MANGGARAI TIMUR"
+      },
+      {
+        "id": "pc-23-10",
+        "name": "NAGEKEO"
+      },
+      {
+        "id": "pc-23-11",
+        "name": "ROTE NDAO"
+      },
+      {
+        "id": "pc-23-12",
+        "name": "SUMBA BARAT"
+      },
+      {
+        "id": "pc-23-13",
+        "name": "SUMBA BARAT DAYA"
+      },
+      {
+        "id": "pc-23-14",
+        "name": "TIMOR TENGAH SELATAN"
+      }
+    ]
+  },
+  {
+    "id": "pd-24",
+    "name": "PAPUA",
+    "pcs": [
+      {
+        "id": "pc-24-1",
+        "name": "BIAK NUMFOR"
+      },
+      {
+        "id": "pc-24-2",
+        "name": "DOGIYAI"
+      },
+      {
+        "id": "pc-24-3",
+        "name": "JAYAPURA"
+      },
+      {
+        "id": "pc-24-4",
+        "name": "JAYAWIJAYA"
+      },
+      {
+        "id": "pc-24-5",
+        "name": "KEEROM"
+      },
+      {
+        "id": "pc-24-6",
+        "name": "KEPULAUAN YAPEN"
+      },
+      {
+        "id": "pc-24-7",
+        "name": "KOTA JAYAPURA"
+      },
+      {
+        "id": "pc-24-8",
+        "name": "MAMBERAMO RAYA"
+      },
+      {
+        "id": "pc-24-9",
+        "name": "MAPPI"
+      },
+      {
+        "id": "pc-24-10",
+        "name": "MERAUKE"
+      },
+      {
+        "id": "pc-24-11",
+        "name": "MIMIKA"
+      },
+      {
+        "id": "pc-24-12",
+        "name": "NABIRE"
+      },
+      {
+        "id": "pc-24-13",
+        "name": "PANIAI"
+      },
+      {
+        "id": "pc-24-14",
+        "name": "PUNCAK"
+      },
+      {
+        "id": "pc-24-15",
+        "name": "PUNCAK JAYA"
+      },
+      {
+        "id": "pc-24-16",
+        "name": "SARMI"
+      },
+      {
+        "id": "pc-24-17",
+        "name": "SUPIORI"
+      },
+      {
+        "id": "pc-24-18",
+        "name": "WAROPEN"
+      },
+      {
+        "id": "pc-24-19",
+        "name": "YAHUKIMO"
+      }
+    ]
+  },
+  {
+    "id": "pd-25",
+    "name": "PAPUA BARAT",
+    "pcs": [
+      {
+        "id": "pc-25-1",
+        "name": "FAKFAK"
+      },
+      {
+        "id": "pc-25-2",
+        "name": "KAIMANA"
+      },
+      {
+        "id": "pc-25-3",
+        "name": "KOTA SORONG"
+      },
+      {
+        "id": "pc-25-4",
+        "name": "MANOKWARI"
+      },
+      {
+        "id": "pc-25-5",
+        "name": "MANOKWARI SELATAN"
+      },
+      {
+        "id": "pc-25-6",
+        "name": "PEGUNUNGAN ARFAK"
+      },
+      {
+        "id": "pc-25-7",
+        "name": "RAJA AMPAT"
+      },
+      {
+        "id": "pc-25-8",
+        "name": "SORONG"
+      },
+      {
+        "id": "pc-25-9",
+        "name": "SORONG SELATAN"
+      },
+      {
+        "id": "pc-25-10",
+        "name": "TAMBRAUW"
+      },
+      {
+        "id": "pc-25-11",
+        "name": "TELUK BINTUNI"
+      },
+      {
+        "id": "pc-25-12",
+        "name": "TELUK WONDAMA"
+      }
+    ]
+  },
+  {
+    "id": "pd-26",
+    "name": "RIAU",
+    "pcs": [
+      {
+        "id": "pc-26-1",
+        "name": "BENGKALIS"
+      },
+      {
+        "id": "pc-26-2",
+        "name": "INDRAGIRI HILIR"
+      },
+      {
+        "id": "pc-26-3",
+        "name": "INDRAGIRI HULU"
+      },
+      {
+        "id": "pc-26-4",
+        "name": "KAMPAR"
+      },
+      {
+        "id": "pc-26-5",
+        "name": "KEPULAUAN MERANTI"
+      },
+      {
+        "id": "pc-26-6",
+        "name": "KOTA DUMAI"
+      },
+      {
+        "id": "pc-26-7",
+        "name": "KOTA PEKANBARU"
+      },
+      {
+        "id": "pc-26-8",
+        "name": "KUANTAN SINGINGI"
+      },
+      {
+        "id": "pc-26-9",
+        "name": "PELALAWAN"
+      },
+      {
+        "id": "pc-26-10",
+        "name": "ROKAN HILIR"
+      },
+      {
+        "id": "pc-26-11",
+        "name": "ROKAN HULU"
+      },
+      {
+        "id": "pc-26-12",
+        "name": "S I A K"
+      }
+    ]
+  },
+  {
+    "id": "pd-27",
+    "name": "SULAWESI BARAT",
+    "pcs": [
+      {
+        "id": "pc-27-1",
+        "name": "MAJENE"
+      },
+      {
+        "id": "pc-27-2",
+        "name": "MAMASA"
+      },
+      {
+        "id": "pc-27-3",
+        "name": "MAMUJU"
+      },
+      {
+        "id": "pc-27-4",
+        "name": "MAMUJU TENGAH"
+      },
+      {
+        "id": "pc-27-5",
+        "name": "MAMUJU UTARA"
+      },
+      {
+        "id": "pc-27-6",
+        "name": "POLEWALI MANDAR"
+      }
+    ]
+  },
+  {
+    "id": "pd-28",
+    "name": "SULAWESI SELATAN",
+    "pcs": [
+      {
+        "id": "pc-28-1",
+        "name": "BANTAENG"
+      },
+      {
+        "id": "pc-28-2",
+        "name": "BARRU"
+      },
+      {
+        "id": "pc-28-3",
+        "name": "BONE"
+      },
+      {
+        "id": "pc-28-4",
+        "name": "BULUKUMBA"
+      },
+      {
+        "id": "pc-28-5",
+        "name": "ENREKANG"
+      },
+      {
+        "id": "pc-28-6",
+        "name": "GOWA"
+      },
+      {
+        "id": "pc-28-7",
+        "name": "JENEPONTO"
+      },
+      {
+        "id": "pc-28-8",
+        "name": "KEPULAUAN SELAYAR"
+      },
+      {
+        "id": "pc-28-9",
+        "name": "KOTA MAKASSAR"
+      },
+      {
+        "id": "pc-28-10",
+        "name": "KOTA PALOPO"
+      },
+      {
+        "id": "pc-28-11",
+        "name": "KOTA PAREPARE"
+      },
+      {
+        "id": "pc-28-12",
+        "name": "LUWU"
+      },
+      {
+        "id": "pc-28-13",
+        "name": "LUWU TIMUR"
+      },
+      {
+        "id": "pc-28-14",
+        "name": "LUWU UTARA"
+      },
+      {
+        "id": "pc-28-15",
+        "name": "MAROS"
+      },
+      {
+        "id": "pc-28-16",
+        "name": "PANGKAJENE DAN KEPULAUAN"
+      },
+      {
+        "id": "pc-28-17",
+        "name": "PINRANG"
+      },
+      {
+        "id": "pc-28-18",
+        "name": "SIDENRENG RAPPANG"
+      },
+      {
+        "id": "pc-28-19",
+        "name": "SINJAI"
+      },
+      {
+        "id": "pc-28-20",
+        "name": "SOPPENG"
+      },
+      {
+        "id": "pc-28-21",
+        "name": "TAKALAR"
+      },
+      {
+        "id": "pc-28-22",
+        "name": "TANA TORAJA"
+      },
+      {
+        "id": "pc-28-23",
+        "name": "TORAJA UTARA"
+      },
+      {
+        "id": "pc-28-24",
+        "name": "WAJO"
+      }
+    ]
+  },
+  {
+    "id": "pd-29",
+    "name": "SULAWESI TENGAH",
+    "pcs": [
+      {
+        "id": "pc-29-1",
+        "name": "BANGGAI"
+      },
+      {
+        "id": "pc-29-2",
+        "name": "BANGGAI KEPULAUAN"
+      },
+      {
+        "id": "pc-29-3",
+        "name": "BANGGAI LAUT"
+      },
+      {
+        "id": "pc-29-4",
+        "name": "BUOL"
+      },
+      {
+        "id": "pc-29-5",
+        "name": "DONGGALA"
+      },
+      {
+        "id": "pc-29-6",
+        "name": "KOTA PALU"
+      },
+      {
+        "id": "pc-29-7",
+        "name": "MOROWALI"
+      },
+      {
+        "id": "pc-29-8",
+        "name": "MOROWALI UTARA"
+      },
+      {
+        "id": "pc-29-9",
+        "name": "PARIGI MOUTONG"
+      },
+      {
+        "id": "pc-29-10",
+        "name": "POSO"
+      },
+      {
+        "id": "pc-29-11",
+        "name": "SIGI"
+      },
+      {
+        "id": "pc-29-12",
+        "name": "TOJO UNA-UNA"
+      },
+      {
+        "id": "pc-29-13",
+        "name": "TOLI-TOLI"
+      }
+    ]
+  },
+  {
+    "id": "pd-30",
+    "name": "SULAWESI TENGGARA",
+    "pcs": [
+      {
+        "id": "pc-30-1",
+        "name": "BOMBANA"
+      },
+      {
+        "id": "pc-30-2",
+        "name": "BUTON"
+      },
+      {
+        "id": "pc-30-3",
+        "name": "BUTON SELATAN"
+      },
+      {
+        "id": "pc-30-4",
+        "name": "BUTON TENGAH"
+      },
+      {
+        "id": "pc-30-5",
+        "name": "BUTON UTARA"
+      },
+      {
+        "id": "pc-30-6",
+        "name": "KOLAKA"
+      },
+      {
+        "id": "pc-30-7",
+        "name": "KOLAKA TIMUR"
+      },
+      {
+        "id": "pc-30-8",
+        "name": "KOLAKA UTARA"
+      },
+      {
+        "id": "pc-30-9",
+        "name": "KONAWE"
+      },
+      {
+        "id": "pc-30-10",
+        "name": "KONAWE KEPULAUAN"
+      },
+      {
+        "id": "pc-30-11",
+        "name": "KONAWE SELATAN"
+      },
+      {
+        "id": "pc-30-12",
+        "name": "KONAWE UTARA"
+      },
+      {
+        "id": "pc-30-13",
+        "name": "KOTA BAUBAU"
+      },
+      {
+        "id": "pc-30-14",
+        "name": "KOTA KENDARI"
+      },
+      {
+        "id": "pc-30-15",
+        "name": "MUNA"
+      },
+      {
+        "id": "pc-30-16",
+        "name": "MUNA BARAT"
+      },
+      {
+        "id": "pc-30-17",
+        "name": "WAKATOBI"
+      }
+    ]
+  },
+  {
+    "id": "pd-31",
+    "name": "SULAWESI UTARA",
+    "pcs": [
+      {
+        "id": "pc-31-1",
+        "name": "BOLAANG MONGONDOW"
+      },
+      {
+        "id": "pc-31-2",
+        "name": "BOLAANG MONGONDOW SELATAN"
+      },
+      {
+        "id": "pc-31-3",
+        "name": "BOLAANG MONGONDOW TIMUR"
+      },
+      {
+        "id": "pc-31-4",
+        "name": "BOLAANG MONGONDOW UTARA"
+      },
+      {
+        "id": "pc-31-5",
+        "name": "KEPULAUAN SANGIHE"
+      },
+      {
+        "id": "pc-31-6",
+        "name": "KEPULAUAN TALAUD"
+      },
+      {
+        "id": "pc-31-7",
+        "name": "KOTA BITUNG"
+      },
+      {
+        "id": "pc-31-8",
+        "name": "KOTA MANADO"
+      },
+      {
+        "id": "pc-31-9",
+        "name": "KOTA TOMOHON"
+      },
+      {
+        "id": "pc-31-10",
+        "name": "KOTAMOBAGU"
+      },
+      {
+        "id": "pc-31-11",
+        "name": "MINAHASA"
+      },
+      {
+        "id": "pc-31-12",
+        "name": "MINAHASA SELATAN"
+      },
+      {
+        "id": "pc-31-13",
+        "name": "MINAHASA TENGGARA"
+      },
+      {
+        "id": "pc-31-14",
+        "name": "MINAHASA UTARA"
+      },
+      {
+        "id": "pc-31-15",
+        "name": "SIAU TAGULANDANG BIARO"
+      }
+    ]
+  },
+  {
+    "id": "pd-32",
+    "name": "SUMATERA BARAT",
+    "pcs": [
+      {
+        "id": "pc-32-1",
+        "name": "AGAM"
+      },
+      {
+        "id": "pc-32-2",
+        "name": "DHARMASRAYA"
+      },
+      {
+        "id": "pc-32-3",
+        "name": "KEPULAUAN MENTAWAI"
+      },
+      {
+        "id": "pc-32-4",
+        "name": "KOTA BUKITTINGGI"
+      },
+      {
+        "id": "pc-32-5",
+        "name": "KOTA PADANG"
+      },
+      {
+        "id": "pc-32-6",
+        "name": "KOTA PADANG PANJANG"
+      },
+      {
+        "id": "pc-32-7",
+        "name": "KOTA PARIAMAN"
+      },
+      {
+        "id": "pc-32-8",
+        "name": "KOTA PAYAKUMBUH"
+      },
+      {
+        "id": "pc-32-9",
+        "name": "KOTA SAWAH LUNTO"
+      },
+      {
+        "id": "pc-32-10",
+        "name": "KOTA SOLOK"
+      },
+      {
+        "id": "pc-32-11",
+        "name": "LIMA PULUH KOTA"
+      },
+      {
+        "id": "pc-32-12",
+        "name": "PADANG PARIAMAN"
+      },
+      {
+        "id": "pc-32-13",
+        "name": "PASAMAN"
+      },
+      {
+        "id": "pc-32-14",
+        "name": "PASAMAN BARAT"
+      },
+      {
+        "id": "pc-32-15",
+        "name": "PESISIR SELATAN"
+      },
+      {
+        "id": "pc-32-16",
+        "name": "SIJUNJUNG"
+      },
+      {
+        "id": "pc-32-17",
+        "name": "SOLOK"
+      },
+      {
+        "id": "pc-32-18",
+        "name": "SOLOK SELATAN"
+      },
+      {
+        "id": "pc-32-19",
+        "name": "TANAH DATAR"
+      }
+    ]
+  },
+  {
+    "id": "pd-33",
+    "name": "SUMATERA SELATAN",
+    "pcs": [
+      {
+        "id": "pc-33-1",
+        "name": "BANYU ASIN"
+      },
+      {
+        "id": "pc-33-2",
+        "name": "EMPAT LAWANG"
+      },
+      {
+        "id": "pc-33-3",
+        "name": "KOTA LUBUKLINGGAU"
+      },
+      {
+        "id": "pc-33-4",
+        "name": "KOTA PAGAR ALAM"
+      },
+      {
+        "id": "pc-33-5",
+        "name": "KOTA PALEMBANG"
+      },
+      {
+        "id": "pc-33-6",
+        "name": "KOTA PRABUMULIH"
+      },
+      {
+        "id": "pc-33-7",
+        "name": "LAHAT"
+      },
+      {
+        "id": "pc-33-8",
+        "name": "MUARA ENIM"
+      },
+      {
+        "id": "pc-33-9",
+        "name": "MUSI BANYUASIN"
+      },
+      {
+        "id": "pc-33-10",
+        "name": "MUSI RAWAS"
+      },
+      {
+        "id": "pc-33-11",
+        "name": "MUSI RAWAS UTARA"
+      },
+      {
+        "id": "pc-33-12",
+        "name": "OGAN ILIR"
+      },
+      {
+        "id": "pc-33-13",
+        "name": "OGAN KOMERING ILIR"
+      },
+      {
+        "id": "pc-33-14",
+        "name": "OGAN KOMERING ULU"
+      },
+      {
+        "id": "pc-33-15",
+        "name": "OGAN KOMERING ULU SELATAN"
+      },
+      {
+        "id": "pc-33-16",
+        "name": "OGAN KOMERING ULU TIMUR"
+      },
+      {
+        "id": "pc-33-17",
+        "name": "PENUKAL ABAB LEMATANG ILIR"
+      }
+    ]
+  },
+  {
+    "id": "pd-34",
+    "name": "SUMATERA UTARA",
+    "pcs": [
+      {
+        "id": "pc-34-1",
+        "name": "ASAHAN"
+      },
+      {
+        "id": "pc-34-2",
+        "name": "BATU BARA"
+      },
+      {
+        "id": "pc-34-3",
+        "name": "DAIRI"
+      },
+      {
+        "id": "pc-34-4",
+        "name": "DELI SERDANG"
+      },
+      {
+        "id": "pc-34-5",
+        "name": "HUMBANG HASUNDUTAN"
+      },
+      {
+        "id": "pc-34-6",
+        "name": "KOTA BINJAI"
+      },
+      {
+        "id": "pc-34-7",
+        "name": "KOTA GUNUNGSITOLI"
+      },
+      {
+        "id": "pc-34-8",
+        "name": "KOTA MEDAN"
+      },
+      {
+        "id": "pc-34-9",
+        "name": "KOTA PADANGSIDIMPUAN"
+      },
+      {
+        "id": "pc-34-10",
+        "name": "KOTA PEMATANG SIANTAR"
+      },
+      {
+        "id": "pc-34-11",
+        "name": "KOTA SIBOLGA"
+      },
+      {
+        "id": "pc-34-12",
+        "name": "KOTA TANJUNG BALAI"
+      },
+      {
+        "id": "pc-34-13",
+        "name": "LABUHAN BATU UTARA"
+      },
+      {
+        "id": "pc-34-14",
+        "name": "LANGKAT"
+      },
+      {
+        "id": "pc-34-15",
+        "name": "MANDAILING NATAL"
+      },
+      {
+        "id": "pc-34-16",
+        "name": "NIAS"
+      },
+      {
+        "id": "pc-34-17",
+        "name": "NIAS SELATAN"
+      },
+      {
+        "id": "pc-34-18",
+        "name": "PADANG LAWAS"
+      },
+      {
+        "id": "pc-34-19",
+        "name": "PADANG LAWAS UTARA"
+      },
+      {
+        "id": "pc-34-20",
+        "name": "PAKPAK BHARAT"
+      },
+      {
+        "id": "pc-34-21",
+        "name": "SAMOSIR"
+      },
+      {
+        "id": "pc-34-22",
+        "name": "SIMALUNGUN"
+      },
+      {
+        "id": "pc-34-23",
+        "name": "TAPANULI SELATAN"
+      },
+      {
+        "id": "pc-34-24",
+        "name": "TAPANULI TENGAH"
+      },
+      {
+        "id": "pc-34-25",
+        "name": "TAPANULI UTARA"
+      },
+      {
+        "id": "pc-34-26",
+        "name": "TOBA SAMOSIR"
+      }
+    ]
+  }
+]
