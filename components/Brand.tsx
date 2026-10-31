@@ -1,0 +1,1 @@
+export default function Brand(){return <header><a href="/" className="brand">Ruang Registrasi<span>Hexpharm Jaya</span></a><img src="/hj-logo.png" alt="Hexpharm Jaya — A Kalbe Company" width="180" height="36" /></header>}

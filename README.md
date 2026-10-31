@@ -1,32 +1,19 @@
 # HJ Bayer — Registrasi Acara
 
-Website registrasi yang dapat digunakan kembali untuk berbagai acara Hexpharm Jaya. Acara pertama: Pertemuan Ilmiah Tahunan Bidan 2026.
+Next.js untuk registrasi acara Hexpharm Jaya, hosting Vercel dan backend Supabase.
 
-## Platform
+## Status implementasi
 
-- Next.js untuk aplikasi
-- Vercel untuk hosting
-- Supabase untuk PostgreSQL, Auth admin, dan Storage
+Fondasi aplikasi tersedia: halaman acara publik, login admin Supabase, pemeriksaan keanggotaan admin di server, daftar acara admin, dan komponen PD–PC dengan fallback manual. Komponen organisasi belum terhubung ke alur registrasi produksi; data 34 PD/478 PC tetap tersedia di data/ sebagai sumber impor, belum diimpor ke database.
 
-## Status
+Belum tersedia: transaksi pendaftaran, token bukti, editor form, upload Storage, koreksi audit, ekspor CSV, dan manajemen acara. Tidak ada tombol yang mengklaim registrasi berhasil sebelum integrasi selesai.
 
-Repository baru diinisialisasi. Aplikasi Next.js, integrasi runtime, pengujian, dan deployment belum tersedia.
+## Menjalankan
 
-Fondasi database sudah dipasang pada proyek Supabase yang ada. Satu akun telah tercatat pada `public.admin_users`; login aplikasi belum diuji. Jangan menjalankan ulang migration awal atau mereset database.
+Gunakan Node.js 24.x. Jalankan npm ci, salin .env.example ke .env.local dan isi koneksi, lalu npm run dev. Jangan commit .env.local, password, secret key atau data peserta.
 
-## Acuan implementasi
+Panduan deploy/uji: docs/VERCEL-PREVIEW.md.
+Tinjauan schema: docs/DATABASE-REVIEW.md.
+Acuan visual: prototype/desain-registrasi-v2.html (simulasi).
 
-- Desain: `desain-registrasi-v2.html` pada paket handover.
-- Warna utama: `#EB318D`; logo Hexpharm Jaya asli dipertahankan.
-- Peserta tanpa akun/OTP: halaman acara → form → konfirmasi → bukti.
-- Nama dan nomor HP adalah field inti; nomor HP unik per acara setelah normalisasi.
-- PD → PC menggunakan data master; ranting berupa teks bebas.
-- Admin mengelola acara, versi form, organisasi, peserta, koreksi dengan audit, aset, dan CSV.
-- Validasi, kuota, idempotensi, dan pemeriksaan akses harus diterapkan pada server/database.
-- Vercel Preview harus menggunakan database uji yang terpisah sebelum pengujian tulis.
-
-## Konfigurasi
-
-Variabel yang direncanakan: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, dan `APP_URL`. Kunci server tambahan, jika diperlukan, disimpan hanya dalam environment server.
-
-Jangan menyimpan password, secret key, token sesi, atau data peserta di repository.
+Database dasar sudah ada. Jangan menjalankan ulang migration awal atau mereset database. Pengujian tulis berikutnya harus memakai database uji terpisah.

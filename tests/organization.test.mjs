@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {resolveOrganization,changePd,MANUAL} from '../lib/organization.ts';
+const options=[{id:'a',name:'PD A',pcs:[{id:'a1',name:'PC A1'}]},{id:'b',name:'PD B',pcs:[{id:'b1',name:'PC B1'}]}];
+const base={pdId:'a',pcId:'a1',pdManual:'',pcManual:'',ranting:'  Ranting  Contoh '};
+test('master saves IDs and correct names',()=>{const r=resolveOrganization(base,options);assert.equal(r.pd_id,'a');assert.equal(r.pc_id,'a1');assert.equal(r.ranting,'Ranting Contoh');});
+test('PC belonging to another PD is rejected',()=>assert.throws(()=>resolveOrganization({...base,pcId:'b1'},options)));
+test('manual PD requires both names and stores no fake IDs',()=>{assert.throws(()=>resolveOrganization({...base,pdId:MANUAL},options));const r=resolveOrganization({...base,pdId:MANUAL,pdManual:'  PD Baru ',pcManual:' PC  Baru '},options);assert.equal(r.pd_id,null);assert.equal(r.pc_id,null);assert.equal(r.pc_name_snapshot,'PC Baru');});
+test('manual PC preserves selected master PD',()=>{const r=resolveOrganization({...base,pcId:MANUAL,pcManual:'PC baru'},options);assert.equal(r.pd_id,'a');assert.equal(r.pc_id,null);});
+test('changing PD clears previous PC and manual names',()=>assert.deepEqual(changePd({...base,pdManual:'lama',pcManual:'lama'},'b'),{...base,pdId:'b',pcId:'',pdManual:'',pcManual:''}));
