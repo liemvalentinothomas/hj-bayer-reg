@@ -34,6 +34,9 @@ class Fixture(BaseHTTPRequestHandler):
    enc=lambda x:base64.urlsafe_b64encode(json.dumps(x).encode()).decode().rstrip('=')
    token=enc({'alg':'HS256'})+'.'+enc({'sub':uid,'exp':int(time.time())+3600})+'.fixture'
    return self.reply(200,{'access_token':token,'refresh_token':'fixture-refresh','expires_in':3600,'token_type':'bearer','user':{'id':uid,'email':'fixture@example.test'}})
+  if self.path.startswith('/rest/v1/rpc/hj_submit_registration'):return self.reply(200,{'ok':True,'receipt':{'id':eid,'number':'REG-FIXTURE','name':'Fixture','slug':'fixture'}})
+  if self.path.startswith('/rest/v1/rpc/hj_registration_receipt'):return self.reply(200,None)
+  if self.path.startswith('/rest/v1/rpc/hj_capabilities'):return self.reply(200,{'version':1,'registration':True})
   name,_=self.rows();rows=data if isinstance(data,list) else [data]
   for r in rows:r.setdefault('id',str(uuid.uuid4()));r.setdefault('active',True);tables[name].append(r)
   return self.reply(201,rows[0] if 'vnd.pgrst.object' in self.headers.get('Accept','') else rows)
@@ -73,5 +76,15 @@ try:
  payload['definition']=json.dumps(valid);r=req('/admin/actions',payload);assert 'message='in r[1]['location'] and len(tables['form_versions'])==2 and tables['form_versions'][1]['version']==2 and json.dumps(tables['form_versions'][0]['definition'],sort_keys=True)==previous;print('PASS new revision preserves historical definition')
  child=tables['organization_pc'][0];r=req('/admin/actions',{'action':'org.pc.disable','id':child['id']});assert not child['active'];r=req('/admin/actions',{'action':'org.import'});assert len(tables['organization_pc'])==478 and not child['active'];print('PASS import does not reactivate disabled PC')
  r=req('/admin/actions',{'action':'event.create','name':'Second event','slug':'second-event','color':'#EB318D'});assert 'message='in r[1]['location'] and len(tables['events'])==2 and tables['events'][1]['status']=='draft';print('PASS new event starts as draft')
+ tables['registrations']=[{'id':str(uuid.uuid4()),'event_id':eid,'form_version_id':tables['form_versions'][0]['id'],'registration_number':'REG-TEST','full_name':'=SUM(1,2)','phone_normalized':'+628123456789','email':'','pd_name_snapshot':'Manual PD','pc_name_snapshot':'Manual PC','ranting':'Ranting','answers':{'nama':'=SUM(1,2)','hp':'+628123456789','delima':'Ya'},'created_at':'2026-10-31T00:00:00Z'}]
+ r=req('/admin/events/'+eid+'/participants');assert r[0]==200 and 'REG-TEST' in r[2];print('PASS participant management renders scoped records')
+ r=req('/admin/events/'+eid+'/export');assert r[0]==200 and r[1]['content-type'].startswith('text/csv') and "'=SUM(1,2)" in r[2] and 'receipt_token_hash' not in r[2];print('PASS CSV includes versioned answers and protects formulas')
+ def post_json(path,body):
+  c=http.client.HTTPConnection('127.0.0.1',3119,timeout=30);c.request('POST',path,json.dumps(body),{'Content-Type':'application/json','Origin':'http://127.0.0.1:3119'});r=c.getresponse();out=(r.status,json.loads(r.read()));c.close();return out
+ public_body={'slug':'fixture','version':tables['form_versions'][0]['id'],'request':str(uuid.uuid4()),'token':'a'*64,'agree':True,'payload':{'answers':{},'org':{}}}
+ r=post_json('/api/registrations',{**public_body,'agree':False});assert r[0]==400;print('PASS public registration requires confirmation')
+ r=post_json('/api/registrations',{**public_body,'website':'bot-filled'});assert r[0]==400;print('PASS honeypot submission rejected')
+ r=post_json('/api/registrations',public_body);assert r[0]==200 and r[1]['receipt']['number']=='REG-FIXTURE';print('PASS public route forwards validated envelope to transaction RPC')
+ r=post_json('/api/receipt',{'slug':'fixture','id':eid,'token':'a'*64});assert r[0]==200 and r[1]['receipt']is None;print('PASS unknown receipt yields no participant data')
  allow_admin=False;r=req('/admin/actions',{'action':'event.archive','id':eid});assert r[1]['location'].endswith('/login') and tables['events'][0]['status']=='draft';print('PASS authenticated nonadmin mutation denied')
 finally:p.terminate();p.wait(timeout=10);server.shutdown()

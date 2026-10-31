@@ -1,0 +1,95 @@
+jenis,tabel,nama,definisi
+constraint,admin_users,admin_users_pkey,PRIMARY KEY (singleton)
+constraint,admin_users,admin_users_singleton_check,CHECK (singleton)
+constraint,admin_users,admin_users_user_id_fkey,FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE RESTRICT
+constraint,admin_users,admin_users_user_id_key,UNIQUE (user_id)
+constraint,app_settings,app_settings_pkey,PRIMARY KEY (singleton)
+constraint,app_settings,app_settings_singleton_check,CHECK (singleton)
+constraint,events,events_banner_position_x_check,CHECK (((banner_position_x >= 0) AND (banner_position_x <= 100)))
+constraint,events,events_banner_position_y_check,CHECK (((banner_position_y >= 0) AND (banner_position_y <= 100)))
+constraint,events,events_capacity_check,CHECK (((capacity IS NULL) OR (capacity > 0)))
+constraint,events,events_check,CHECK (((registration_opens_at IS NULL) OR (registration_closes_at IS NULL) OR (registration_closes_at > registration_opens_at)))
+constraint,events,events_check1,CHECK (((status <> 'open'::text) OR (published_form_version_id IS NOT NULL)))
+constraint,events,events_color_check,CHECK ((color ~ '^#[0-9a-fA-F]{6}$'::text))
+constraint,events,events_form_belongs_to_event,"FOREIGN KEY (published_form_version_id, id) REFERENCES form_versions(id, event_id) ON DELETE RESTRICT"
+constraint,events,events_name_check,CHECK (((length(btrim(name)) >= 1) AND (length(btrim(name)) <= 250)))
+constraint,events,events_pkey,PRIMARY KEY (id)
+constraint,events,events_slug_check,CHECK ((slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'::text))
+constraint,events,events_slug_key,UNIQUE (slug)
+constraint,events,events_status_check,"CHECK ((status = ANY (ARRAY['draft'::text, 'open'::text, 'closed'::text, 'archived'::text])))"
+constraint,form_versions,form_versions_definition_check,CHECK ((jsonb_typeof(definition) = 'object'::text))
+constraint,form_versions,form_versions_event_id_fkey,FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE RESTRICT
+constraint,form_versions,form_versions_event_id_version_key,"UNIQUE (event_id, version)"
+constraint,form_versions,form_versions_id_event_id_key,"UNIQUE (id, event_id)"
+constraint,form_versions,form_versions_pkey,PRIMARY KEY (id)
+constraint,form_versions,form_versions_status_check,"CHECK ((status = ANY (ARRAY['draft'::text, 'published'::text, 'archived'::text])))"
+constraint,form_versions,form_versions_version_check,CHECK ((version > 0))
+constraint,organization_pc,organization_pc_id_pd_id_key,"UNIQUE (id, pd_id)"
+constraint,organization_pc,organization_pc_name_check,CHECK (((length(btrim(name)) >= 1) AND (length(btrim(name)) <= 200)))
+constraint,organization_pc,organization_pc_pd_id_fkey,FOREIGN KEY (pd_id) REFERENCES organization_pd(id) ON DELETE RESTRICT
+constraint,organization_pc,organization_pc_pkey,PRIMARY KEY (id)
+constraint,organization_pd,organization_pd_name_check,CHECK (((length(btrim(name)) >= 1) AND (length(btrim(name)) <= 200)))
+constraint,organization_pd,organization_pd_pkey,PRIMARY KEY (id)
+constraint,registration_audit,registration_audit_admin_user_id_fkey,FOREIGN KEY (admin_user_id) REFERENCES auth.users(id) ON DELETE RESTRICT
+constraint,registration_audit,registration_audit_pkey,PRIMARY KEY (id)
+constraint,registration_audit,registration_audit_reason_check,CHECK ((length(btrim(reason)) > 0))
+constraint,registration_audit,registration_audit_registration_id_fkey,FOREIGN KEY (registration_id) REFERENCES registrations(id) ON DELETE RESTRICT
+constraint,registrations,registrations_answers_check,CHECK ((jsonb_typeof(answers) = 'object'::text))
+constraint,registrations,registrations_check,CHECK (((pc_id IS NULL) OR (pd_id IS NOT NULL)))
+constraint,registrations,registrations_event_id_fkey,FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE RESTRICT
+constraint,registrations,registrations_event_id_idempotency_key_key,"UNIQUE (event_id, idempotency_key)"
+constraint,registrations,registrations_event_id_phone_normalized_key,"UNIQUE (event_id, phone_normalized)"
+constraint,registrations,registrations_form_version_id_event_id_fkey,"FOREIGN KEY (form_version_id, event_id) REFERENCES form_versions(id, event_id) ON DELETE RESTRICT"
+constraint,registrations,registrations_full_name_check,CHECK (((length(btrim(full_name)) >= 1) AND (length(btrim(full_name)) <= 250)))
+constraint,registrations,registrations_pc_id_pd_id_fkey,"FOREIGN KEY (pc_id, pd_id) REFERENCES organization_pc(id, pd_id) ON DELETE RESTRICT"
+constraint,registrations,registrations_pd_id_fkey,FOREIGN KEY (pd_id) REFERENCES organization_pd(id) ON DELETE RESTRICT
+constraint,registrations,registrations_phone_normalized_check,"CHECK ((phone_normalized ~ '^\+[1-9][0-9]{7,14}$'::text))"
+constraint,registrations,registrations_pkey,PRIMARY KEY (id)
+constraint,registrations,registrations_registration_number_key,UNIQUE (registration_number)
+index,admin_users,admin_users_pkey,CREATE UNIQUE INDEX admin_users_pkey ON public.admin_users USING btree (singleton)
+index,admin_users,admin_users_user_id_key,CREATE UNIQUE INDEX admin_users_user_id_key ON public.admin_users USING btree (user_id)
+index,app_settings,app_settings_pkey,CREATE UNIQUE INDEX app_settings_pkey ON public.app_settings USING btree (singleton)
+index,events,events_pkey,CREATE UNIQUE INDEX events_pkey ON public.events USING btree (id)
+index,events,events_slug_key,CREATE UNIQUE INDEX events_slug_key ON public.events USING btree (slug)
+index,form_versions,form_versions_event_id_version_key,"CREATE UNIQUE INDEX form_versions_event_id_version_key ON public.form_versions USING btree (event_id, version)"
+index,form_versions,form_versions_id_event_id_key,"CREATE UNIQUE INDEX form_versions_id_event_id_key ON public.form_versions USING btree (id, event_id)"
+index,form_versions,form_versions_pkey,CREATE UNIQUE INDEX form_versions_pkey ON public.form_versions USING btree (id)
+index,organization_pc,organization_pc_id_pd_id_key,"CREATE UNIQUE INDEX organization_pc_id_pd_id_key ON public.organization_pc USING btree (id, pd_id)"
+index,organization_pc,organization_pc_pkey,CREATE UNIQUE INDEX organization_pc_pkey ON public.organization_pc USING btree (id)
+index,organization_pc,pc_active_name_unique,"CREATE UNIQUE INDEX pc_active_name_unique ON public.organization_pc USING btree (pd_id, lower(btrim(name))) WHERE active"
+index,organization_pc,pc_parent_lookup,CREATE INDEX pc_parent_lookup ON public.organization_pc USING btree (pd_id)
+index,organization_pd,organization_pd_pkey,CREATE UNIQUE INDEX organization_pd_pkey ON public.organization_pd USING btree (id)
+index,organization_pd,pd_active_name_unique,CREATE UNIQUE INDEX pd_active_name_unique ON public.organization_pd USING btree (lower(btrim(name))) WHERE active
+index,registration_audit,registration_audit_pkey,CREATE UNIQUE INDEX registration_audit_pkey ON public.registration_audit USING btree (id)
+index,registrations,registrations_event_date,"CREATE INDEX registrations_event_date ON public.registrations USING btree (event_id, created_at)"
+index,registrations,registrations_event_id_idempotency_key_key,"CREATE UNIQUE INDEX registrations_event_id_idempotency_key_key ON public.registrations USING btree (event_id, idempotency_key)"
+index,registrations,registrations_event_id_phone_normalized_key,"CREATE UNIQUE INDEX registrations_event_id_phone_normalized_key ON public.registrations USING btree (event_id, phone_normalized)"
+index,registrations,registrations_event_organization,"CREATE INDEX registrations_event_organization ON public.registrations USING btree (event_id, pd_id, pc_id)"
+index,registrations,registrations_pkey,CREATE UNIQUE INDEX registrations_pkey ON public.registrations USING btree (id)
+index,registrations,registrations_registration_number_key,CREATE UNIQUE INDEX registrations_registration_number_key ON public.registrations USING btree (registration_number)
+policy,admin_users,admin_reads_own_membership,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""(user_id = ( SELECT auth.uid() AS uid))"", ""with_check"" : null}"
+policy,app_settings,admin_insert,"{""roles"" : [""authenticated""], ""command"" : ""INSERT"", ""using"" : null, ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,app_settings,admin_read,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : null}"
+policy,app_settings,admin_update,"{""roles"" : [""authenticated""], ""command"" : ""UPDATE"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,app_settings,public_company_logo,"{""roles"" : [""anon"",""authenticated""], ""command"" : ""SELECT"", ""using"" : ""true"", ""with_check"" : null}"
+policy,events,admin_insert,"{""roles"" : [""authenticated""], ""command"" : ""INSERT"", ""using"" : null, ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,events,admin_read,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : null}"
+policy,events,admin_update,"{""roles"" : [""authenticated""], ""command"" : ""UPDATE"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,events,public_events,"{""roles"" : [""anon"",""authenticated""], ""command"" : ""SELECT"", ""using"" : ""(status = ANY (ARRAY['open'::text, 'closed'::text]))"", ""with_check"" : null}"
+policy,form_versions,admin_insert,"{""roles"" : [""authenticated""], ""command"" : ""INSERT"", ""using"" : null, ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,form_versions,admin_read,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : null}"
+policy,form_versions,admin_update,"{""roles"" : [""authenticated""], ""command"" : ""UPDATE"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,form_versions,public_current_form,"{""roles"" : [""anon"",""authenticated""], ""command"" : ""SELECT"", ""using"" : ""((status = 'published'::text) AND (EXISTS ( SELECT 1\n   FROM events e\n  WHERE ((e.id = form_versions.event_id) AND (e.published_form_version_id = form_versions.id) AND (e.status = ANY (ARRAY['open'::text, 'closed'::text]))))))"", ""with_check"" : null}"
+policy,organization_pc,admin_insert,"{""roles"" : [""authenticated""], ""command"" : ""INSERT"", ""using"" : null, ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,organization_pc,admin_read,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : null}"
+policy,organization_pc,admin_update,"{""roles"" : [""authenticated""], ""command"" : ""UPDATE"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,organization_pc,public_pc,"{""roles"" : [""anon"",""authenticated""], ""command"" : ""SELECT"", ""using"" : ""(active AND (EXISTS ( SELECT 1\n   FROM organization_pd p\n  WHERE ((p.id = organization_pc.pd_id) AND p.active))))"", ""with_check"" : null}"
+policy,organization_pd,admin_insert,"{""roles"" : [""authenticated""], ""command"" : ""INSERT"", ""using"" : null, ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,organization_pd,admin_read,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : null}"
+policy,organization_pd,admin_update,"{""roles"" : [""authenticated""], ""command"" : ""UPDATE"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,organization_pd,public_pd,"{""roles"" : [""anon"",""authenticated""], ""command"" : ""SELECT"", ""using"" : ""active"", ""with_check"" : null}"
+policy,registration_audit,admin_insert,"{""roles"" : [""authenticated""], ""command"" : ""INSERT"", ""using"" : null, ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,registration_audit,admin_read,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : null}"
+policy,registrations,admin_insert,"{""roles"" : [""authenticated""], ""command"" : ""INSERT"", ""using"" : null, ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"
+policy,registrations,admin_read,"{""roles"" : [""authenticated""], ""command"" : ""SELECT"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : null}"
+policy,registrations,admin_update,"{""roles"" : [""authenticated""], ""command"" : ""UPDATE"", ""using"" : ""( SELECT is_registration_admin() AS is_registration_admin)"", ""with_check"" : ""( SELECT is_registration_admin() AS is_registration_admin)""}"

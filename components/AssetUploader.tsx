@@ -1,0 +1,12 @@
+'use client';
+import {useState} from 'react';
+import {createBrowserClient} from '@supabase/ssr';
+export default function AssetUploader({eventId,kind,title,preview}:{eventId?:string;kind:'banner'|'event_logo'|'company_logo';title:string;preview?:string|null}){
+ const [file,setFile]=useState<File|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState(''),[local,setLocal]=useState<string|null>(null);
+ async function send(remove=false){setBusy(true);setError('');let path='';try{
+  const c=createBrowserClient(process.env.NEXT_PUBLIC_SUPABASE_URL!,process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!);
+  if(!remove){if(!file)throw new Error('Pilih gambar terlebih dahulu.');const max=(kind==='banner'?8:2)*1024*1024;if(file.size>max)throw new Error(kind==='banner'?'Banner maksimal 8 MB.':'Logo maksimal 2 MB.');const ext=({'image/png':'png','image/jpeg':'jpg','image/webp':'webp'} as Record<string,string>)[file.type];if(!ext)throw new Error('Gunakan PNG, JPG, atau WebP.');path=(kind==='company_logo'?'company':`events/${eventId}`)+'/'+kind+'/'+crypto.randomUUID()+'.'+ext;const r=await c.storage.from('registration-assets').upload(path,file,{contentType:file.type,upsert:false});if(r.error)throw new Error('Unggah gagal. Periksa koneksi dan aktivasi penyimpanan.');}
+  const r=await fetch('/admin/assets',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({eventId,kind,path:remove?null:path})});const b=await r.json();if(!r.ok){if(path)await c.storage.from('registration-assets').remove([path]);throw new Error(b.error||'Gambar belum dapat disimpan.');}window.location.reload();
+ }catch(e){setError(e instanceof Error?e.message:'Unggah gagal.');}finally{setBusy(false);}}
+ return <section className="card"><h2>{title}</h2>{(local||preview)&&<img className={kind==='banner'?'asset-preview banner-preview':'asset-preview'} src={local||preview||''} alt={'Pratinjau '+title}/>}<label>Ganti gambar<input type="file" accept="image/png,image/jpeg,image/webp" onChange={e=>{const f=e.target.files?.[0]||null;setFile(f);if(local)URL.revokeObjectURL(local);setLocal(f?URL.createObjectURL(f):null);}}/></label><p className="muted">PNG, JPG, WebP · maksimal {kind==='banner'?'8':'2'} MB. Gambar asli dipertahankan.</p>{error&&<p role="alert" className="notice error">{error}</p>}<div className="tabs"><button disabled={busy||!file} onClick={()=>send()}>{busy?'Menyimpan…':'Unggah dan simpan'}</button><button disabled={busy||!preview} onClick={()=>send(true)}>Hapus dari tampilan</button></div></section>;
+}

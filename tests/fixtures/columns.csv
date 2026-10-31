@@ -1,0 +1,61 @@
+table_name,column_name,data_type,is_nullable,column_default
+admin_users,singleton,boolean,NO,true
+admin_users,user_id,uuid,NO,null
+admin_users,created_at,timestamp with time zone,NO,now()
+app_settings,singleton,boolean,NO,true
+app_settings,company_logo_path,text,YES,null
+app_settings,created_at,timestamp with time zone,NO,now()
+events,id,uuid,NO,gen_random_uuid()
+events,slug,text,NO,null
+events,name,text,NO,null
+events,description,text,NO,''::text
+events,location,text,YES,null
+events,starts_at,timestamp with time zone,YES,null
+events,registration_opens_at,timestamp with time zone,YES,null
+events,registration_closes_at,timestamp with time zone,YES,null
+events,capacity,integer,YES,null
+events,status,text,NO,'draft'::text
+events,color,text,NO,'#EB318D'::text
+events,event_logo_path,text,YES,null
+events,banner_path,text,YES,null
+events,banner_position_x,integer,NO,50
+events,banner_position_y,integer,NO,50
+events,published_form_version_id,uuid,YES,null
+events,created_at,timestamp with time zone,NO,now()
+form_versions,id,uuid,NO,gen_random_uuid()
+form_versions,event_id,uuid,NO,null
+form_versions,version,integer,NO,null
+form_versions,status,text,NO,'draft'::text
+form_versions,definition,jsonb,NO,"'{""sections"": [], ""questions"": []}'::jsonb"
+form_versions,created_at,timestamp with time zone,NO,now()
+organization_pc,id,uuid,NO,gen_random_uuid()
+organization_pc,pd_id,uuid,NO,null
+organization_pc,name,text,NO,null
+organization_pc,active,boolean,NO,true
+organization_pc,created_at,timestamp with time zone,NO,now()
+organization_pd,id,uuid,NO,gen_random_uuid()
+organization_pd,name,text,NO,null
+organization_pd,active,boolean,NO,true
+organization_pd,created_at,timestamp with time zone,NO,now()
+registration_audit,id,uuid,NO,gen_random_uuid()
+registration_audit,registration_id,uuid,NO,null
+registration_audit,admin_user_id,uuid,NO,null
+registration_audit,reason,text,NO,null
+registration_audit,before_data,jsonb,NO,null
+registration_audit,after_data,jsonb,NO,null
+registration_audit,created_at,timestamp with time zone,NO,now()
+registrations,id,uuid,NO,gen_random_uuid()
+registrations,event_id,uuid,NO,null
+registrations,form_version_id,uuid,NO,null
+registrations,registration_number,text,NO,null
+registrations,idempotency_key,uuid,NO,null
+registrations,full_name,text,NO,null
+registrations,phone_normalized,text,NO,null
+registrations,email,text,YES,null
+registrations,pd_id,uuid,YES,null
+registrations,pc_id,uuid,YES,null
+registrations,pd_name_snapshot,text,YES,null
+registrations,pc_name_snapshot,text,YES,null
+registrations,ranting,text,YES,null
+registrations,answers,jsonb,NO,'{}'::jsonb
+registrations,created_at,timestamp with time zone,NO,now()

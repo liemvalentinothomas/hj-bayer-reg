@@ -16,6 +16,19 @@ export async function POST(request:NextRequest){
  try{
  const form=await request.formData(),action=String(form.get('action')||''),id=String(form.get('id')||'');
  if(action.startsWith('org.'))dest='/admin/organizations';else if(uuid(id))dest='/admin/events/'+id;
+ if(action==='event.publish'){
+  if(!uuid(id)||!uuid(form.get('version')))throw new Error('Simpan dan tinjau revisi form terlebih dahulu.');
+  const r=await client.rpc('hj_publish_event',{p_event:id,p_version:String(form.get('version'))});if(r.error)throw new Error(r.error.code==='P0001'?r.error.message:'Publikasi belum tersedia. Jalankan migration fitur lengkap terlebih dahulu.');return go(dest,'message','Form diterbitkan dan pendaftaran dibuka sesuai periode acara.');
+ }
+ if(action==='event.close'){
+  if(!uuid(id))throw new Error('Acara tidak valid.');const r=await client.from('events').update({status:'closed'}).eq('id',id).select('id').single();dbError(r.error);return go(dest,'message','Pendaftaran ditutup. Bukti peserta tetap tersedia.');
+ }
+ if(action==='event.copy'){
+  if(!uuid(id))throw new Error('Acara tidak valid.');const name=clean(form.get('name')),slug=clean(form.get('slug'),120);if(!name||!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug))throw new Error('Isi nama dan slug salinan yang valid.');const r=await client.rpc('hj_copy_event',{p_event:id,p_name:name,p_slug:slug});if(r.error)throw new Error(r.error.code==='23505'?'Slug salinan sudah dipakai.':'Acara belum dapat disalin. Periksa aktivasi fitur database.');return go('/admin/events/'+r.data,'message','Acara disalin sebagai draf, tanpa peserta lama.');
+ }
+ if(action==='event.crop'){
+  if(!uuid(id))throw new Error('Acara tidak valid.');const x=Number(form.get('x')),y=Number(form.get('y'));if(!Number.isInteger(x)||!Number.isInteger(y)||x<0||x>100||y<0||y>100)throw new Error('Posisi potong tidak valid.');const r=await client.from('events').update({banner_position_x:x,banner_position_y:y}).eq('id',id).select('id').single();dbError(r.error);return go(dest,'message','Posisi potong banner tersimpan.');
+ }
  if(action==='event.create'){
   dest='/admin/events/new';const payload=eventInput(form);const r=await client.from('events').insert({...payload,status:'draft'}).select('id').single();dbError(r.error);return go('/admin/events/'+r.data!.id,'message','Acara dibuat sebagai draf.');
  }

@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import sharp from 'sharp';import {validateImage} from '../lib/image-validation.ts';
+test('valid original image bytes remain unchanged',async()=>{const b=await sharp({create:{width:16,height:10,channels:3,background:'#eb318d'}}).png().toBuffer();const copy=Buffer.from(b);assert.equal((await validateImage(b,'logo')).width,16);assert.deepEqual(b,copy);});
+test('SVG and malformed content cannot be published as a raster image',async()=>{await assert.rejects(validateImage(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"/>'),'logo'));await assert.rejects(validateImage(Buffer.from('not an image'),'banner'));});
+test('oversized uploads rejected before decoding',async()=>{await assert.rejects(validateImage(Buffer.alloc(2*1024*1024+1),'logo'));});
