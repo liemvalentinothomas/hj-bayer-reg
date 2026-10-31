@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initialForm,validateDefinition} from '../lib/forms.ts';
+import {eventInput,wibInput} from '../lib/admin-input.ts';
+test('initial template validates and preserves stable IDs',()=>{const d=initialForm();assert.equal(validateDefinition(d).questions[0].id,'nama');});
+test('core questions cannot be removed or made optional',()=>{const d=initialForm();d.questions=d.questions.filter(q=>q.id!=='hp');assert.throws(()=>validateDefinition(d));const e=initialForm();e.questions[0].required=false;assert.throws(()=>validateDefinition(e));});
+test('conditional rules reject forward references and duplicate IDs',()=>{const d=initialForm();d.questions[2].condition={questionId:'pengurus',equals:'Ya'};assert.throws(()=>validateDefinition(d));const e=initialForm();e.questions[2].id='nama';assert.throws(()=>validateDefinition(e));});
+test('linked PD PC group cannot be separated',()=>{const d=initialForm();[d.questions[5],d.questions[7]]=[d.questions[7],d.questions[5]];assert.throws(()=>validateDefinition(d));});
+test('validation returns independent version snapshot',()=>{const d=initialForm(),stored=validateDefinition(d);d.questions[0].label='Changed';assert.notEqual(stored.questions[0].label,d.questions[0].label);});
+const valid=()=>{const f=new FormData();for(const [k,v] of Object.entries({name:'PIT Bidan',slug:'pit-bidan',color:'#EB318D',starts_at:'2026-11-05T17:30'}))f.set(k,v);return f;};
+test('event dates round trip in WIB and blank capacity remains null',()=>{const r=eventInput(valid());assert.equal(r.starts_at,'2026-11-05T10:30:00.000Z');assert.equal(wibInput(r.starts_at),'2026-11-05T17:30');assert.equal(r.capacity,null);});
+test('invalid capacity and inverted registration window rejected',()=>{const f=valid();f.set('capacity','1.5');assert.throws(()=>eventInput(f));f.delete('capacity');f.set('registration_opens_at','2026-11-05T10:00');f.set('registration_closes_at','2026-11-04T10:00');assert.throws(()=>eventInput(f));});

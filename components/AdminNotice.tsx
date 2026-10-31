@@ -1,0 +1,1 @@
+export default function AdminNotice({message,error}:{message?:string;error?:string}){return <>{message&&<p role="status" className="notice">{message}</p>}{error&&<p role="alert" className="notice error">{error}</p>}</>}
